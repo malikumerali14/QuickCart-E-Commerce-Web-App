@@ -27,7 +27,7 @@ export const AppContextProvider = (props) => {
     }
 
     const fetchUserData = async () => {
-        if(user.publicMetadata?.role == 'seller'){
+        if (user.publicMetadata?.role == 'seller') {
             setIsSeller(true)
         }
         setUserData(userDummyData)
@@ -85,7 +85,8 @@ export const AppContextProvider = (props) => {
 
     useEffect(() => {
         fetchUserData()
-    }, [])
+        
+    }, [user])
 
     const value = {
         user,
